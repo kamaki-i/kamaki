@@ -1,0 +1,199 @@
+<html>
+
+<head>
+
+    <title>kaneki - kamaki</title>
+    <link rel="shortout icon" type="image/x-icon" href="./images/ketflix.ico">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<style>
+		@font-face{
+			font-family: 'Ghoul';
+			src: url('./fonts/ghoul.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+  
+		}
+
+		*{
+			box-sizing: border-box;
+		}
+
+		html{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		body{
+		  width: 100%;
+		  height: 100%;
+
+		}
+
+
+		/* Black Page */
+
+		.blackpage{
+		  background-color: black;
+		  width: 100%;
+		  height: 100%;
+		}
+
+
+		/* Page 4 */
+
+		.page4{
+		  position: relative;
+		  margin: 0px;
+		  width: calc(100% - 0px);
+		  height: calc(100% - 0px);
+		  overflow: hidden;
+		  
+		}
+
+		.finalQuote{
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  top: 0;
+		  left: 0;
+		  background-image: url("./images/kaneki.jpg");
+		  background-position: center;
+		  background-size: cover;
+		  opacity: 1;
+		  display:flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+
+		.finalQuote blockquote{
+		  font-family: "Ghoul";
+		  font-size: 2.5em;
+		  color: white;
+		  margin-top: 300px;
+		  background-color: rgba(0,0,0,0.9);
+		  width: 100%;
+		  text-align: center;
+
+		}
+
+		/* http://meyerweb.com/eric/tools/css/reset/ 
+		   v2.0 | 20110126
+		   License: none (public domain)
+		*/
+
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+	</style>
+	
+	<script>
+		!function(t,e,s,i){"use strict";
+		function n(e,s){
+		this.element=e,this.settings=t.extend({},a,s),
+		this._defaults=a,this._name=r,this.init()}var r="mgGlitch",
+		a={destroy:!1,glitch:!0,scale:!0,blend:!0,blendModeType:"hue",
+		glitch1TimeMin:600,glitch1TimeMax:900,glitch2TimeMin:10,
+		glitch2TimeMax:115,zIndexStart:5};t.extend(n.prototype,
+		{init:function(){this.glitch()},
+		glitch:function(){function e(t,e){return Math.floor(Math.random()*(e-t+1))+t}
+		function s(){var i=e(10,1900),n=9999,a=e(10,1300),o=0,h=e(0,16),f=e(0,16),
+		d=e(c,l);t(r).css({clip:"rect("+i+"px, "+n+"px, "+a+"px,"+o+"px)",right:f,left:h}),
+		setTimeout(s,d)}function i(){var s=e(10,1900),n=9999,c=e(10,1300),l=0,f=e(0,40),
+		d=e(0,40),m=e(o,h);if(a===!0)var x=(Math.random()*(1.1-.9)+.9).toFixed(2);else if(a===!1)var x=1;
+		t(r).next().css({clip:"rect("+s+"px, "+n+"px, "+c+"px,"+l+"px)",left:f,right:d,
+		"-webkit-transform":"scale("+x+")","-ms-transform":"scale("+x+")",transform:"scale("+x+")"}),
+		setTimeout(i,m)}function n(){var s=e(10,1900),i=9999,c=e(10,1300),l=0,f=e(0,40),d=e(0,40),
+		m=e(o,h);if(a===!0)var x=(Math.random()*(1.1-.9)+.9).toFixed(2);else if(a===!1)
+		var x=1;t(r).next().next().css({clip:"rect("+s+"px, "+i+"px, "+c+"px,"+l+"px)",
+		left:f,right:d,"-webkit-transform":"scale("+x+")","-ms-transform":"scale("+x+")",
+		transform:"scale("+x+")"}),setTimeout(n,m)}var r=this.element,a=this.settings.scale,
+		c=this.settings.glitch1TimeMin,l=this.settings.glitch1TimeMax,o=this.settings.glitch2TimeMin,
+		h=this.settings.glitch2TimeMax,f=this.settings.zIndexStart;
+		if(this.settings.destroy===!0)(t(r).hasClass("el-front-1")||t(r).hasClass("front-3")||t(r)
+		.hasClass("front-2"))&&t(".front-1, .front-2, .front-3").remove(),t(".back").removeClass("back");
+		else if(this.settings.destroy===!1){var d=t(r).clone();if(d.insertBefore(r).addClass("back")
+		.css({"z-index":f}),this.settings.blend===!0){var d=t(r).clone();d.insertAfter(r)
+		.addClass("front-3").css({"z-index":f+3,"mix-blend-mode":this.settings.blendModeType})
+		,n()}if(this.settings.glitch===!0){var d=t(r).clone();d.insertAfter(r).addClass("front-2")
+		.css({"z-index":f+2}),t(".back").next().addClass("front-1").css({"z-index":f+1}),s(),i()}}}})
+		,t.fn[r]=function(t){return this.each(function(){new n(this,t)})}}(jQuery,window,document);
+
+
+		$(function(){
+		  $(".finalQuote").mgGlitch({
+			destroy: false,
+			glitch: true,
+			scale: true,
+			blend: true,
+			blendModeType: 'hue',
+			glitch1TimeMin: 200,
+			glitch1TimeMax: 400,
+			glitch2TimeMin: 10,
+			glitch2TimeMax: 100
+
+		  });
+		});
+	</script>
+</head>
+
+<body>
+<section class="page4">
+    <div class="finalQuote back" style="z-index: 5;">
+      <blockquote>"If you were to write a story with me in the lead role it would certainly be ... a tragedy."</blockquote>
+    </div><div class="finalQuote front-1" style="z-index: 6; clip: rect(896px, 9999px, 214px, 0px); right: 7px; left: 14px;">
+      <blockquote>"If you were to write a story with me in the lead role it would certainly be ... a tragedy."</blockquote>
+    </div><div class="finalQuote front-2" style="z-index: 7; clip: rect(1338px, 9999px, 1109px, 0px); left: 2px; right: 2px; transform: scale(1.05);">
+      <blockquote>"If you were to write a story with me in the lead role it would certainly be ... a tragedy."</blockquote>
+    </div><div class="finalQuote front-3" style="z-index: 8; mix-blend-mode: hue; clip: rect(505px, 9999px, 1000px, 0px); left: 14px; right: 28px; transform: scale(1.09);">
+      <blockquote>"If you were to write a story with me in the lead role it would certainly be ... a tragedy."</blockquote>
+    </div>
+  </section>
+</body>
+
+</html>
